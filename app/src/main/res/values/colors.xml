@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="color_background">#050B18</color>
+    <color name="color_install_btn">#F4D144</color>
+    <color name="color_rating_stars">#F4D144</color>
+    <color name="color_chip_background">#002D4D</color>
+    <color name="color_divider">#1A1F29</color>
+    <color name="color_btn">#47FFFFFF</color>
+
+    <color name="color_text_main">#FFFFFF</color>
+    <color name="color_text_secondary">#A7ABB7</color>
+    <color name="color_text_tertiary">#45454D</color>
+    <color name="color_text_chip">#41A0E7</color>
+    <color name="color_text_btn_install">#050B18</color>
 </resources>

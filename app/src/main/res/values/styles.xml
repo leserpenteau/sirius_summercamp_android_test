@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btn_menu">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">56dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+</resources>

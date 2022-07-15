@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appbar_layout_height">354dp</dimen>
+    <dimen name="app_overlapping">-22dp</dimen>
+    <dimen name="app_padding">24dp</dimen>
+
+    <dimen name="img_background_height">378dp</dimen>
+    <dimen name="img_logo_width">86dp</dimen>
+    <dimen name="img_logo_height">86dp</dimen>
+
+    <dimen name="rating_width">82dp</dimen>
+    <dimen name="rating_height">20dp</dimen>
+
+    <dimen name="divider_height">1dp</dimen>
+
+    <dimen name="img_profile_width">36dp</dimen>
+    <dimen name="img_profile_height">36dp</dimen>
+
+    <dimen name="txt_date_width">0dp</dimen>
+
+    <dimen name="corner_radius_btn">12dp</dimen>
+
+    // margin top
+    <dimen name="extra_small_margin_top">5dp</dimen>
+    <dimen name="small_margin_top">8dp</dimen>
+    <dimen name="normal_margin_top">16dp</dimen>
+    <dimen name="large_margin_top">25dp</dimen>
+    <dimen name="extra_large_margin_top">32dp</dimen>
+
+    // margin bottom
+    <dimen name="large_margin_bottom">25dp</dimen>
+
+    // margin start
+    <dimen name="small_margin_start">5dp</dimen>
+    <dimen name="normal_margin_start">16dp</dimen>
+
+    // margin end
+    <dimen name="small_margin_end">5dp</dimen>
+
+    // text sizes
+    <dimen name="extra_small_text_size">10sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="normal_text_size">16sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="extra_large_text_size">48sp</dimen>
+
+</resources>

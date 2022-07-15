@@ -1,4 +1,6 @@
 #### Превьюшка сделанного экрана :)
 
 
-<img src="https://i.ibb.co/hYJD2ZZ/ezgif-5-f65a9955b8.gif" width="400" height="600"/>
+
+https://user-images.githubusercontent.com/31797019/179145156-3cfde6e4-0b35-48cf-8139-f55b8e8a8695.mp4
+

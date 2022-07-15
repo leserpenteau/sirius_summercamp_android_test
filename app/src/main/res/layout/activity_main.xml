@@ -69,168 +69,177 @@
             android:layout_marginTop="@dimen/app_overlapping"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="@dimen/app_padding"
-                android:paddingRight="@dimen/app_padding">
+                app:cardBackgroundColor="@color/color_background"
+                app:cardCornerRadius="@dimen/corner_radius_btn">
 
-                <ImageView
-                    android:id="@+id/img_logo"
-                    android:layout_width="@dimen/img_logo_width"
-                    android:layout_height="@dimen/img_logo_height"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" >
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/txt_game_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/normal_margin_start"
-                    android:layout_marginTop="@dimen/extra_large_margin_top"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:textSize="@dimen/large_text_size"
-                    android:textColor="@color/color_text_main"
-                    app:layout_constraintLeft_toRightOf="@+id/img_logo"
-                    app:layout_constraintTop_toTopOf="@+id/img_logo">
-                </TextView>
-
-                <RatingBar
-                    android:id="@+id/rating_game"
-                    style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:layout_width="@dimen/rating_width"
-                    android:layout_height="@dimen/rating_height"
-                    android:layout_marginStart="@dimen/small_margin_start"
-                    android:layout_marginTop="@dimen/extra_small_margin_top"
-                    android:progressTint="@color/color_rating_stars"
-                    app:layout_constraintLeft_toRightOf="@+id/img_logo"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_game_title">
-                </RatingBar>
-
-                <TextView
-                    android:id="@+id/txt_total_marks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/normal_margin_start"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:textSize="@dimen/small_text_size"
-                    android:textColor="@color/color_text_tertiary"
-                    app:layout_constraintLeft_toRightOf="@+id/rating_game"
-                    app:layout_constraintTop_toTopOf="@id/rating_game">
-                </TextView>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_chips"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/chip_item"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@id/img_logo">
-                </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/app_padding"
+                    android:paddingRight="@dimen/app_padding">
 
-                <TextView
-                    android:id="@+id/txt_game_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:textColor="@color/color_text_secondary"
-                    android:textSize="@dimen/small_text_size"
-                    android:lineSpacingExtra="3dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_chips">
-                </TextView>
+                    <ImageView
+                        android:id="@+id/img_logo"
+                        android:layout_marginTop="@dimen/large_margin_top"
+                        android:layout_width="@dimen/img_logo_width"
+                        android:layout_height="@dimen/img_logo_height"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
+                    </ImageView>
 
-                <TextView
-                    android:id="@+id/txt_review_and_ratings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:text="@string/str_review_and_ratings"
-                    android:textColor="@color/color_text_main"
-                    android:textSize="@dimen/normal_text_size"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_game_description">
-                </TextView>
+                    <TextView
+                        android:id="@+id/txt_game_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_margin_start"
+                        android:layout_marginTop="@dimen/extra_large_margin_top"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textSize="@dimen/large_text_size"
+                        android:textColor="@color/color_text_main"
+                        app:layout_constraintLeft_toRightOf="@+id/img_logo"
+                        app:layout_constraintTop_toTopOf="@+id/img_logo">
+                    </TextView>
 
-                <TextView
-                    android:id="@+id/txt_total_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:textColor="@color/color_text_main"
-                    android:textSize="@dimen/extra_large_text_size"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_review_and_ratings">
-                </TextView>
+                    <RatingBar
+                        android:id="@+id/rating_game"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="@dimen/rating_width"
+                        android:layout_height="@dimen/rating_height"
+                        android:layout_marginStart="@dimen/small_margin_start"
+                        android:layout_marginTop="@dimen/extra_small_margin_top"
+                        android:progressTint="@color/color_rating_stars"
+                        app:layout_constraintLeft_toRightOf="@+id/img_logo"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_game_title">
+                    </RatingBar>
 
-                <RatingBar
-                    android:id="@+id/rating_game_2"
-                    style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:layout_width="@dimen/rating_width"
-                    android:layout_height="@dimen/rating_height"
-                    android:layout_marginStart="@dimen/small_margin_start"
-                    android:layout_marginTop="@dimen/extra_small_margin_top"
-                    android:progressTint="@color/color_rating_stars"
-                    app:layout_constraintLeft_toRightOf="@+id/txt_total_rate"
-                    app:layout_constraintTop_toTopOf="@+id/txt_total_rate">
-                </RatingBar>
+                    <TextView
+                        android:id="@+id/txt_total_marks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_margin_start"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textSize="@dimen/small_text_size"
+                        android:textColor="@color/color_text_tertiary"
+                        app:layout_constraintLeft_toRightOf="@+id/rating_game"
+                        app:layout_constraintTop_toTopOf="@id/rating_game">
+                    </TextView>
 
-                <TextView
-                    android:id="@+id/txt_total_marks_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/small_margin_top"
-                    android:layout_marginStart="@dimen/small_margin_start"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:textSize="@dimen/small_text_size"
-                    android:textColor="@color/color_text_secondary"
-                    app:layout_constraintLeft_toLeftOf="@+id/rating_game_2"
-                    app:layout_constraintTop_toBottomOf="@+id/rating_game_2">
-                </TextView>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_chips"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/chip_item"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/img_logo">
+                    </androidx.recyclerview.widget.RecyclerView>
 
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/divider_height"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    android:background="@color/color_divider"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_total_marks_2">
-                </View>
+                    <TextView
+                        android:id="@+id/txt_game_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textColor="@color/color_text_secondary"
+                        android:textSize="@dimen/small_text_size"
+                        android:lineSpacingExtra="3dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/recycler_chips">
+                    </TextView>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_reviews"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/normal_margin_top"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/review_item"
-                    android:orientation="vertical"
-                    app:layout_constraintTop_toBottomOf="@id/divider">
-                </androidx.recyclerview.widget.RecyclerView>
+                    <TextView
+                        android:id="@+id/txt_review_and_ratings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:text="@string/str_review_and_ratings"
+                        android:textColor="@color/color_text_main"
+                        android:textSize="@dimen/normal_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_game_description">
+                    </TextView>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_install"
-                    android:layout_width="327dp"
-                    android:layout_height="64dp"
-                    android:backgroundTint="@color/color_install_btn"
-                    android:fontFamily="@font/sk_modernist_regular"
-                    android:text="@string/str_btn_install_text"
-                    android:textColor="@color/color_text_btn_install"
-                    android:textSize="@dimen/large_text_size"
-                    android:textStyle="bold"
-                    app:cornerRadius="@dimen/corner_radius_btn"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/recycler_reviews" />
+                    <TextView
+                        android:id="@+id/txt_total_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textColor="@color/color_text_main"
+                        android:textSize="@dimen/extra_large_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_review_and_ratings">
+                    </TextView>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <RatingBar
+                        android:id="@+id/rating_game_2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="@dimen/rating_width"
+                        android:layout_height="@dimen/rating_height"
+                        android:layout_marginStart="@dimen/small_margin_start"
+                        android:layout_marginTop="@dimen/extra_small_margin_top"
+                        android:progressTint="@color/color_rating_stars"
+                        app:layout_constraintLeft_toRightOf="@+id/txt_total_rate"
+                        app:layout_constraintTop_toTopOf="@+id/txt_total_rate">
+                    </RatingBar>
+
+                    <TextView
+                        android:id="@+id/txt_total_marks_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_margin_top"
+                        android:layout_marginStart="@dimen/small_margin_start"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:textSize="@dimen/small_text_size"
+                        android:textColor="@color/color_text_secondary"
+                        app:layout_constraintLeft_toLeftOf="@+id/rating_game_2"
+                        app:layout_constraintTop_toBottomOf="@+id/rating_game_2">
+                    </TextView>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        android:background="@color/color_divider"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_total_marks_2">
+                    </View>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/normal_margin_top"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/review_item"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/divider">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_install"
+                        android:layout_width="327dp"
+                        android:layout_height="64dp"
+                        android:backgroundTint="@color/color_install_btn"
+                        android:fontFamily="@font/sk_modernist_regular"
+                        android:text="@string/str_btn_install_text"
+                        android:textColor="@color/color_text_btn_install"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold"
+                        app:cornerRadius="@dimen/corner_radius_btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recycler_reviews" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </androidx.core.widget.NestedScrollView>
 
